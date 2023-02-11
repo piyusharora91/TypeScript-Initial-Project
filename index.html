@@ -10,40 +10,44 @@
 
 <body>
 
-  <div class="wrapper">
+  <header>
     <h1>Finance Logger</h1>
+  </header>
 
-    <!-- output list -->
-    <ul class="item-list">
+  <main>
+    <div class="form-container">
+      <form class="new-item-form">
+        <div class="field">
+          <label>Type:</label>
+          <select id="type">
+            <option value="invoice">Invoice</option>
+            <option value="payment">Payment</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>To / From:</label>
+          <input type="text" id="tofrom" required>
+        </div>
+        <div class="field">
+          <label>Details:</label>
+          <input type="text" id="details" required>
+        </div>
+        <div class="field">
+          <label>Amount (£):</label>
+          <input type="number" id="amount" value="0" required>
+        </div>
+        <button>Add</button>
+      </form>
+    </div>
 
-    </ul>
-  </div>
+    <div class="list-container">
+      <!-- output list -->
+      <ul class="item-list">
 
-  <footer>
-    <form class="new-item-form">
-      <div class="field">
-        <label>Type:</label>
-        <select id="type">
-          <option value="invoice">Invoice</option>
-          <option value="payment">Payment</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>To / From:</label>
-        <input type="text" id="tofrom">
-      </div>
-      <div class="field">
-        <label>Details:</label>
-        <input type="text" id="details">
-      </div>
-      <div class="field">
-        <label>Amount (£):</label>
-        <input type="number" id="amount">
-      </div>
-      <button>Add</button>
-    </form>
+      </ul>
+    </div>
 
-  </footer>
+  </main>
 
   <script src="./public/app.js" type="module"></script>
 </body>

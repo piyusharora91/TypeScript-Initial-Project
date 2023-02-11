@@ -16,7 +16,7 @@ const amount = document.querySelector("#amount") as HTMLInputElement;
 const ul = document.querySelector("ul") as HTMLUListElement;
 const list = new ListTemplate(ul);
 
-form.addEventListener("submit", (e: Event) => {
+const loadInputs = (e: Event) => {
   e.preventDefault();
 
   let values: [string, string, number];
@@ -30,7 +30,9 @@ form.addEventListener("submit", (e: Event) => {
     doc = new Payments(...values);
     list.render(doc, type.value, "end");
   }
-});
+};
+
+form.addEventListener("submit", (e: Event) => loadInputs(e));
 
 // let docOne: HasFormatter;
 // let docTwo: HasFormatter;
