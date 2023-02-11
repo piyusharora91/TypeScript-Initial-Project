@@ -56,7 +56,7 @@ select {
   display: inline-block;
   margin: 0 10px;
 }
-button {
+#submit {
   color: white;
   border: 0;
   background: #ff0aa7;
@@ -66,12 +66,14 @@ button {
   cursor: pointer;
   margin-top: 20px;
 }
-button:hover {
+#submit:hover {
   background: #f3089d;
 }
 ul {
   padding: 0;
   list-style-type: none;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 li {
   padding: 6px 10px;
@@ -99,8 +101,33 @@ li p {
   top: 1px;
 }
 
+.delete-log-icon {
+  color: #ff0aa7;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.delete-log-icon:hover {
+  color: #b60876;
+}
+
+.delete-log-icon:active {
+  scale: 0.97;
+}
+
 @media screen and (max-width: 500px) {
+  .form-container {
+    height: 320px;
+  }
   form {
-    bottom: 15px;
+    bottom: 12px;
+  }
+  li h4 {
+    margin-left: 7px;
+    font-size: 19px;
+  }
+  li p {
+    font-size: 14px;
   }
 }

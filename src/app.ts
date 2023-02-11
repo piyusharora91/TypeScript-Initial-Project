@@ -30,6 +30,10 @@ const loadInputs = (e: Event) => {
     doc = new Payments(...values);
     list.render(doc, type.value, "end");
   }
+
+  toFrom.value = "";
+  details.value = "";
+  amount.valueAsNumber = 0;
 };
 
 // On Load
@@ -37,25 +41,3 @@ if (localStorage.getItem("finances-logged")) {
 }
 
 form.addEventListener("submit", (e: Event) => loadInputs(e));
-
-// let docOne: HasFormatter;
-// let docTwo: HasFormatter;
-
-// docOne = new Invoice("yoshi", "web design", 700);
-// docTwo = new Payments("mario", "plumber", 200);
-
-// let docs: HasFormatter[] = [];
-
-// docs.push(docOne);
-// docs.push(docTwo);
-
-// const invOne = new Invoice("Mario", "Web Design", 500);
-// const invTwo = new Invoice("Luigi", "Web Development", 1000);
-
-// let invoices: Invoice[] = [];
-// invoices.push(invOne);
-// invoices.push(invTwo);
-
-// invoices.forEach((invoice) => {
-//   console.log(invoice.client, invoice.details, invoice.format());
-// });

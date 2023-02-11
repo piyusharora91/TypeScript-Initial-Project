@@ -21,6 +21,9 @@ const loadInputs = (e) => {
         doc = new Payments(...values);
         list.render(doc, type.value, "end");
     }
+    toFrom.value = "";
+    details.value = "";
+    amount.valueAsNumber = 0;
 };
 if (localStorage.getItem("finances-logged")) {
 }
