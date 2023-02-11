@@ -80,7 +80,7 @@ li {
   border: 1px solid #eee;
   margin: 10px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 li h4 {
@@ -89,7 +89,6 @@ li h4 {
   text-transform: capitalize;
   text-align: center;
   width: max-content;
-  margin-left: 10px;
   font-size: 20px;
 }
 li p {
