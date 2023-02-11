@@ -32,6 +32,10 @@ const loadInputs = (e: Event) => {
   }
 };
 
+// On Load
+if (localStorage.getItem("finances-logged")) {
+}
+
 form.addEventListener("submit", (e: Event) => loadInputs(e));
 
 // let docOne: HasFormatter;

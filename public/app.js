@@ -22,4 +22,6 @@ const loadInputs = (e) => {
         list.render(doc, type.value, "end");
     }
 };
+if (localStorage.getItem("finances-logged")) {
+}
 form.addEventListener("submit", (e) => loadInputs(e));
